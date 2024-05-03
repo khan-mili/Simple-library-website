@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showData()">showdata</button>
+    <div id="info" style="border: 4px solid rgb(0, 145, 255);"></div>
+    <script>
+        function showData(){
+            var a=new URLSearchParams(window.location.search);
+            var id = a.get("id");
+            var name = a.get("name")
+            var bill =a.get("bill")
+            document.getElementById("info").innerHTML=" Id is " + id + " Name is " + name + " Student Bill is " + bill; 
+            }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Bill Management</title>
+
+    <style>
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            background-color: aqua;
+            padding: 20px;
+        }
+        .formcontainer {
+            width: 100%;
+            background-color: bisque;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        input {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .formcontainer p {
+            background-color: yellowgreen;
+            padding: 5px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1>Student Bill Management</h1>
+    <div class="formcontainer">
+        <form action="studentinfo.html" method="GET">
+            <p>Name</p><input type="text" id="name" name="name">
+            <p>ID</p><input type="number" id="id" name="id">
+            <p>Bill</p><input type="number" id="bill" name="bill">
+            <br>
+            <button onclick="createStudent()">Create</button>
+            <button onclick="updateStudent()">Update</button>
+            <button onclick="deleteStudent()">Delete</button>
+            <button onclick="checkBill()">Read</button>
+            <button onclick="totalBill()">Total Bill</button>
+            <div id="output"></div>
+        </form>
+    </div>
+   </div> 
+   <script>
+    // Function to initialize student data in localStorage if not present
+    function initializeStudents() {
+      if (!localStorage.getItem('students')) {
+        localStorage.setItem('students', JSON.stringify([]));
+      }
+    }
+
+    // Function to take student data from localStorage
+    function getStudents() {
+      return JSON.parse(localStorage.getItem('students'));
+    }
+
+    // Function to save student data to localStorage
+    function saveStudents(students) {
+      localStorage.setItem('students', JSON.stringify(students));
+    }
+
+    // Function to add a new student
+    function createStudent() {
+      const studentId = document.getElementById('studentId').value;
+      const studentName = document.getElementById('studentName').value;
+      const studentBill = parseFloat(document.getElementById('studentBill').value);
+
+      if (studentId && studentName && !isNaN(studentBill) && studentBill >= 0) {
+        const students = getStudents();
+        students.push({ id: studentId, name: studentName, bill: studentBill });
+        saveStudents(students);
+        displayOutput('Student added successfully.');
+      } else {
+        displayOutput('Invalid input. Please provide valid values.');
+      }
+    }
+    </script>
+</body>
+</html>
