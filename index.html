@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Shop || Web Designer Max</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header class="header">
+        <div class="header_one">
+            <a href="" class="logo"><i class="fas fa-book"></i> Helmet</a>
+            <form action="" class="search-form">
+                <input id="search-box" type="search" placeholder="Find books and other...">
+                <button type="submit" class="fas fa-search"></button>
+            </form>
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="fr">Suomi</option>
+                <option value="es">Svenska</option> 
+            </select>
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                
+                
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+        </div>
+       
+        <div class="header_two">
+            <div class="navbar">
+                <ul>
+                    <li><a href="#"><i class="far fa-home"></i> HOME</a></li>
+                    <li><a href="#"><i class="far fa-calendar"></i> EVENTS</a></li>
+                    <li><a id="nav-toggle" href="#"><i class="fas fa-bars"></i> MENU</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form action="">
+            <h3>sign in</h3>
+            <span>email</span>
+            <input type="email" class="box" placeholder="enter your email">
+            <span>password</span>
+            <input type="password" class="box" placeholder="enter your password">
+            <div class="check-box">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forgot password? <a href="">click here</a></p>
+            <p>dont't have an account ? <a href="">create one</a></p>
+        </form>
+    </div>
+    
+    <div class="navigation">
+        <div class="nav-container">
+            <div class="nav-sub">
+                <div class="short">
+                    <h4>Libraries</h4>
+                    <img src="image/arrow.png" alt="Toggle" class="toggleIcon">
+                </div>
+                <div class="long" aria-hidden="true">
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Library locations</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-sub">
+                <div class="short">
+                    <h4>Services</h4>
+                    <img src="image/arrow.png" alt="Toggle" class="toggleIcon">
+                </div>
+                <div class="long">
+                    <ul>
+                        
+                        <li><a href="#">Digital support</a></li>
+                        <li><a href="#">Privet libraries</a></li>
+                        <li><a href="#">Remote service</a></li>
+                        <li><a href="#">Regional warehouses</a></li>
+                        <li><a href="#">Volunteer at a library</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-sub">
+                <div class="short">
+                    <h4>Info</h4>
+                    <img src="image/arrow.png" alt="Toggle" class="toggleIcon">
+                </div>
+                <div class="long">
+                    <ul>
+                        <li><a href="#">Library card and borrowing</a></li>
+                        <li><a href="#">My account</a></li>
+                        <li><a href="./studentmanagement.html">Management info</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">Loan periods and payments</a></li>
+                        <li><a href="#">Customer's responsibility for library fees</a></li>
+                        <li><a href="#">Information search instructions</a></li>
+                        <li><a href="#">When you acn't get to the library</a></li>
+                        <li><a href="#">Printing in the library</a></li>
+                        <li><a href="#">Frequently asked</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-sub">
+                <div class="short">
+                    <h4>Contents</h4>
+                    <img src="image/arrow.png" alt="Toggle" class="toggleIcon">
+                </div>
+                <div class="long">
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Literature</a></li>
+                        <li><a href="#">We recommend right now</a></li>
+                        <li><a href="#">Children and young people</a></li>
+                        <li><a href="#">Multilingual services</a></li>
+                        <li><a href="#">Facilities and equipment</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-sub">
+                <div class="short">
+                    <h4>E-library</h4>
+                    <img src="image/arrow.png" alt="Toggle" class="toggleIcon">
+                </div>
+                <div class="long">
+                    <ul>
+                        <li><a href="#">E-library</a></li>
+                        <li><a href="#">E-library instructions</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+        <main>
+           <div class="card-grid">
+              <div class="card">
+                 <a href="#" class="card-link">
+                    <img src="./image/helmet-1.jpeg" alt="Card Image">
+                    <h3>Welcome to the new Helmet web library!</h3>
+                    <p> The new Helmet web library will soon be ready, and the service is already available to customers at helmet.finna.fi. From 8 April onwards, the web address helmet.fi will lead to the new web library.
+                    </p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="card-link">
+                    <img src="./image/helmet-2.jpeg" alt="card image">
+                    <h3>Recommendations</h3>
+                    <p>Come and make an impact together with the library and organizations! Information increases understanding of the eco-crisis, but we also need action to change direction. </p>
+                </a>
+            </div>
+            
+            
+            <div class="card">
+                <a href="#" class="card-link">
+                    <img src="./image/helmet-3.jpeg" alt="card image">
+                    <h3>News</h3>
+                    <p>Read the latest news and announcements about the use of Helmet library services. </p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="card-link">
+                    <img src="./image/helmet-4.jpeg" alt="card image">
+                    <h3>Literature</h3>
+                    <p>See library employee's tips for the Helmet Reading challenge and other current and timeless topics. </p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="card-link">
+                    <img src="./image/helmet-5.jpeg" alt="Card Image">
+                    <h3>Children and young people</h3>
+                    <p>Explore the services offered by the Helmet libraries for children,young people and families as well as schools and daycare centres.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="card-link">
+                    <img src="./image/helmet-6.jpeg" alt="card image">
+                    <h3>Multilingual services</h3>
+                    <p>Explore the Helmet libraries' events,services and collections intended for foreign language speakers.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="card-link">
+                    <img src="./image/helmet-7.jpeg" alt="card image">
+                    <h3>Music</h3>
+                    <p>Explore the Helmet libraries' music collection,events and online materials as well as recreational opportunities.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#" class="card-link">
+                    <img src="./image/helmet-8.jpeg" alt="card image">
+                    <h3>Makerspace</h3>
+                    <p>Read about the Helmet libraries' permises,equipment,items available for loan,and makerspace and game services.</p>
+                </a>
+            </div>
+    </main>
+</div>
+
+
+    
+    <!-------- news letter section start  ----------->
+
+    <section class="newletter">
+        <form action="">
+            <h3>subscribe for latest update</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="submit" value="subscribe" class="btn">
+        </form>
+    </section>
+     <!-------- deal section start  ----------->
+     <section class="deal">
+        <div class="content">
+            <h3>Offer for new coustomer</h3>
+            <h1>upto 30% offers</h1>
+            <p>
+                All you have to do is buy your favorite book 
+                (just one) and send it to a stranger.... 
+            </p>
+            <a href="" class="btn">buy now</a>
+        </div>
+        <a href="" class="swiper-slide box">
+        
+            <div class="image">
+                
+                <img src="./image/book-3.png" alt="">
+                <img src="./image/book-5.png" alt="">
+                <img src="./image/book-6.png" alt="">
+                <img src="./image/book-4.png" alt="">
+                <img src="./image/book-9.png" alt="">
+                <img src="./image/book-2.png" alt="">
+                <img src="./image/book-7.png" alt="">
+                <img src="./image/book-1.png" alt="">
+                <img src="./image/book-3.png" alt="">
+                <img src="./image/book-8.png" alt="">
+                <img src="./image/book-10.png" alt="">
+            
+            </div>
+            <div class="content">
+                <h3>New Books</h3>
+                </div>
+            
+            </a>
+     </section>
+    
+    <footer>
+    <section class="footer">
+        <div class="box-container">
+            
+            
+            <div class="box">
+                <h3>Oficial links</h3>
+                <a href=""><i class="fas fa-arrow-right"></i>account info</a>
+                <a href=""><i class="fas fa-arrow-right"></i>ordered items</a>
+                <a href=""><i class="fas fa-arrow-right"></i>privacy policy</a>
+                <a href=""><i class="fas fa-arrow-right"></i>payment method</a>
+                <a href=""><i class="fas fa-arrow-right"></i>our services</a>
+            </div>
+            
+        </div>
+        
+
+        <div class="share">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+            <a href=""><i class="fa fa-square-pinterest"></i></a>
+        </div>
+    </section>
+    </footer>
+     <!---- swiper cdn link ---------->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     <script>
+         function changeLanguage() {
+             var languageSelect = document.getElementById("languageSelect");
+             var selectedLanguage = languageSelect.value;
+ 
+            
+             alert("Language changed to: " + selectedLanguage);
+         }
+     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
